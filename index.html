@@ -8,5 +8,16 @@
 </head>
 <body>
     <img src="./img/exercise.jpg" alt="">
+    <h1>ESERCIZIO MySQL</h1>
+    <ol>
+        <li>SELECT * FROM `students` WHERE `date_of_birth` LIKE '1990-%'</li>
+        <li>SELECT * FROM `courses` WHERE `cfu` > 10</li>
+        <li>SELECT * FROM `students` WHERE `date_of_birth` < '1991-10-27'</li>
+        <li>SELECT * FROM `courses` WHERE `period` = 'I semestre' AND `year` = 1</li>
+        <li>SELECT * FROM `exams` WHERE `date` = '2020-06-20' AND `hour` > '14:00:00'</li>
+        <li>SELECT * FROM `degrees` WHERE `level`= 'magistrale'</li>
+        <li>SELECT COUNT(`id`) FROM `departments`</li>
+        <li>SELECT * FROM `teachers` WHERE `phone` IS NULL</li>
+    </ol>
 </body>
 </html>
