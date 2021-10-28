@@ -22,5 +22,28 @@
         <li>SELECT COUNT(`id`) FROM `departments`</li>
         <li>SELECT * FROM `teachers` WHERE `phone` IS NULL</li>
     </ol>
+    <h1>ESERCIZIO MySQL GROUP BY</h1>
+    <ol>
+        <li>
+            SELECT COUNT(`id`) AS 'iscritti_annuali' , YEAR(`enrolment_date`) AS 'anno'
+            FROM `students`
+            GROUP BY YEAR(`enrolment_date`)
+        </li>
+        <li>
+            SELECT COUNT(`id`) AS 'numero_insegnanti', `office_number` AS 'numero_ufficio'
+            FROM `teachers` 
+            GROUP BY `office_number`
+        </li>
+        <li>
+            SELECT AVG(`vote`) AS 'media_voti', `exam_id` AS 'id_esame' 
+            FROM `exam_student` 
+            GROUP BY `exam_id`
+        </li>
+        <li>
+            SELECT COUNT(`id`) AS 'numero_corsi_laurea', `department_id` AS 'num_dipartimento' 
+            FROM `degrees` 
+            GROUP BY `department_id`
+        </li>
+    </ol>
 </body>           
 </html>
