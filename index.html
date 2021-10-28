@@ -45,5 +45,45 @@
             GROUP BY `department_id`
         </li>
     </ol>
+    <h1>ESERCIZIO MySQL JOIN</h1>
+    <ol>
+        <li>
+            SELECT `students`.`name` AS 'nome_studente', `students`.`surname` AS 'cognome_studente', `students`.`id` AS
+            'id_studente', `degrees`.`name` AS 'corso_laurea' 
+            FROM `students` 
+            JOIN `degrees` 
+            ON `degree_id` 
+            WHERE `degrees`.`name` = 'Corso di Laurea in Economia'
+        </li>
+        <li>
+            SELECT * 
+            FROM `degrees` 
+            JOIN `departments` 
+            ON `degrees`.`department_id` = `departments`.`id` 
+            WHERE `departments`.`name` = 'Dipartimento di Neuroscienze'
+        </li>
+        <li>
+            SELECT `teachers`.`name` AS 'nome_insegnante', `teachers`.`surname` AS 'cognome_insegnante', `courses`.`id` AS
+            'course_id', `courses`.`name` AS 'course_name', `courses`.`description` AS 'descrizione_corso' 
+            FROM `teachers` 
+            JOIN `course_teacher` 
+            ON `teachers`.`id` = `course_teacher`.`teacher_id` 
+            JOIN `courses` 
+            ON `course_teacher`.`course_id` = `courses`.`id` 
+            WHERE `teachers`.`id` = 44
+        </li>
+        <li>
+            SELECT DISTINCT `students`.`surname` AS 'cognome_studente', `departments`.`name` AS 'nome_dipartimento',
+            `degrees`.`name` AS 'nome_corso_laurea', `degrees`.`level` AS 'livello_corso'
+            FROM `students`
+            JOIN `degrees`
+            ON `students`.`degree_id` = `degrees`.`id`
+            JOIN `departments`
+            ON `degrees`.`department_id`
+            ORDER BY `students`.`surname` ASC
+        </li>
+        <li></li>
+        <li></li>
+    </ol>
 </body>           
 </html>
